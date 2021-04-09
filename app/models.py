@@ -1,18 +1,17 @@
 from typing import Optional
 
-from pydantic import BaseModel, ValidationError, validator
+from pydantic import (
+    BaseModel,
+    Field,
+    ValidationError,
+    validator
+)
 
 
 SEXES = [
     "male",
     "female",
 ]
-
-DEFAULT_USER = {
-    "first_name": "John",
-    "last_name": "Doe",
-    "age": 42,
-}
 
 
 class User(BaseModel):
